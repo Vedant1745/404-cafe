@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+
+.cafe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+}
+
+.logo {
+    margin-bottom: 15px;
+}
+
+.coffee-cup {
+    width: 60px;
+    height: 60px;
+    fill: #b5a5f4;
+    margin-bottom: 10px;
+}
+
+.steam {
+    animation: steam 2s ease-out infinite;
+}
+
+@keyframes steam {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-15px) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.cafe h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.barista {
+    background-color: #f0e1c7;
+    padding: 18px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.barista::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #f0e1c7;
+}
+
+#barista-dialogue {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.actions button {
+    background-color: #b5a5f4;
+    border: none;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.actions button:hover {
+    background-color: #9174d2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.actions button:active {
+    transform: translateY(0);
+}
+
+.button-icon {
+    width: 18px;
+    height: 18px;
+    fill: white;
+}
+
+.footer {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #666;
+    width: 100%;
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.footer a {
+    color: #0077ff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+    .cafe-container {
+        padding: 25px 15px;
+        width: 95%;
+    }
+    
+    .cafe h1 {
+        font-size: 24px;
+    }
+}
